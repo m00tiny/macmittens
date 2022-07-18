@@ -15,5 +15,5 @@ r = requests.get(target)
 data = bs4.BeautifulSoup(r.text, features="html.parser")
 links = data.findAll('a')
 for links in links:
-    print(str(links), "\r\n")
+    print(str(links).strip('<a href="">, "\r\n")
 
